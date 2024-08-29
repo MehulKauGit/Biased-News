@@ -1,6 +1,4 @@
-"use client";
 import { useState } from 'react';
-
 import axios from 'axios';
 
 export default function Home() {
@@ -8,7 +6,7 @@ export default function Home() {
     const [query, setQuery] = useState('');
 
     const fetchNews = async () => {
-        const response = await axios.get(`/pages/api/news?query=${query}`);
+        const response = await axios.get(`/api/news?query=${query}`);
         setArticles(response.data.articles);
     };
 
