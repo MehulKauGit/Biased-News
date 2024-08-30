@@ -45,7 +45,7 @@ export default function Home() {
     return (
         <div className="bg-gray-900 text-white min-h-screen">
             <div className="container mx-auto p-6">
-                <h1 className="text-4xl font-bold mb-6 text-center">AI News Aggregator with Bias Detection</h1>
+                <h1 className="text-4xl font-bold mb-6 text-center">AI NEWS AGGREGATOR WITH BIAS DETECTION</h1>
                 <div className="mb-4 flex items-center">
                     <input
                         type="text"
@@ -67,7 +67,7 @@ export default function Home() {
                 <div>
                     {articles.length > 0 ? (
                         articles.map((article, index) => (
-                            <div key={index} className={`p-4 border-l-4 mb-4 ${getBiasColor(article.biasScore)} border-opacity-75`}>
+                            <div key={index} className={`p-4 border-l-4 mb-4 rounded-lg ${getBiasColor(article.biasScore)} border-opacity-75`}>
                                 <h2 className="text-3xl font-semibold">{article.title}</h2>
                                 <p className="text-gray-300 mt-2">{article.description}</p>
                                 <p className="mt-2">
